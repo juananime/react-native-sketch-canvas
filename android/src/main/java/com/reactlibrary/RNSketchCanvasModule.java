@@ -6,17 +6,17 @@ import com.facebook.react.bridge.ReactContextBaseJavaModule;
 import com.facebook.react.bridge.ReactMethod;
 import com.facebook.react.bridge.Callback;
 
-public class RNReactNativeRNcanvasModule extends ReactContextBaseJavaModule {
+public class RNSketchCanvasModule extends ReactContextBaseJavaModule {
 
   private final ReactApplicationContext reactContext;
 
-  public RNReactNativeRNcanvasModule(ReactApplicationContext reactContext) {
+  public RNSketchCanvasModule(ReactApplicationContext reactContext) {
     super(reactContext);
     this.reactContext = reactContext;
   }
 
   @Override
   public String getName() {
-    return "RNReactNativeRNcanvas";
+    return "RNSketchCanvas";
   }
 }

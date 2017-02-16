@@ -1,7 +1,7 @@
 
-#import "RNReactNativeRNcanvas.h"
+#import "RNSketchCanvas.h"
 
-@implementation RNReactNativeRNcanvas
+@implementation RNSketchCanvas
 
 - (dispatch_queue_t)methodQueue
 {

@@ -1,6 +1,6 @@
 
 import { NativeModules } from 'react-native';
 
-const { RNReactNativeRNcanvas } = NativeModules;
+const { RNSketchCanvas } = NativeModules;
 
-export default RNReactNativeRNcanvas;
+export default RNSketchCanvas;

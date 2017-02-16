@@ -4,17 +4,17 @@ using System.Collections.Generic;
 using Windows.ApplicationModel.Core;
 using Windows.UI.Core;
 
-namespace Com.Reactlibrary.RNReactNativeRNcanvas
+namespace Com.Reactlibrary.RNSketchCanvas
 {
     /// <summary>
     /// A module that allows JS to share data.
     /// </summary>
-    class RNReactNativeRNcanvasModule : NativeModuleBase
+    class RNSketchCanvasModule : NativeModuleBase
     {
         /// <summary>
-        /// Instantiates the <see cref="RNReactNativeRNcanvasModule"/>.
+        /// Instantiates the <see cref="RNSketchCanvasModule"/>.
         /// </summary>
-        internal RNReactNativeRNcanvasModule()
+        internal RNSketchCanvasModule()
         {
 
         }
@@ -26,7 +26,7 @@ namespace Com.Reactlibrary.RNReactNativeRNcanvas
         {
             get
             {
-                return "RNReactNativeRNcanvas";
+                return "RNSketchCanvas";
             }
         }
     }
