@@ -1,20 +1,80 @@
-
 {
-  "name": "react-native-sketch-canvas",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "_args": [
+    [
+      {
+        "raw": "react-native-sketch-canvas",
+        "scope": null,
+        "escapedName": "react-native-sketch-canvas",
+        "name": "react-native-sketch-canvas",
+        "rawSpec": "",
+        "spec": "latest",
+        "type": "tag"
+      },
+      "/Users/juanjimenez/otomogroove_projects/phoom_RN/phoom"
+    ]
+  ],
+  "_from": "react-native-sketch-canvas@latest",
+  "_id": "react-native-sketch-canvas@1.0.1",
+  "_inCache": true,
+  "_location": "/react-native-sketch-canvas",
+  "_nodeVersion": "7.4.0",
+  "_npmOperationalInternal": {
+    "host": "packages-12-west.internal.npmjs.com",
+    "tmp": "tmp/react-native-sketch-canvas-1.0.1.tgz_1487265610588_0.9225187012925744"
   },
+  "_npmUser": {
+    "name": "otomogroove",
+    "email": "juan@otomogroove.com"
+  },
+  "_npmVersion": "4.0.5",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "react-native-sketch-canvas",
+    "scope": null,
+    "escapedName": "react-native-sketch-canvas",
+    "name": "react-native-sketch-canvas",
+    "rawSpec": "",
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-native-sketch-canvas/-/react-native-sketch-canvas-1.0.1.tgz",
+  "_shasum": "7942cc6ced234b4d32e9fbfb2fe73f155fe29584",
+  "_shrinkwrap": null,
+  "_spec": "react-native-sketch-canvas",
+  "_where": "/Users/juanjimenez/otomogroove_projects/phoom_RN/phoom",
+  "author": "",
+  "dependencies": {},
+  "description": "## Getting started",
+  "devDependencies": {},
+  "directories": {},
+  "dist": {
+    "shasum": "7942cc6ced234b4d32e9fbfb2fe73f155fe29584",
+    "tarball": "https://registry.npmjs.org/react-native-sketch-canvas/-/react-native-sketch-canvas-1.0.1.tgz"
+  },
+  "gitHead": "963bfe133fce176adc4389ffe2c914a0f7b5ceee",
   "keywords": [
     "react-native"
   ],
-  "author": "",
   "license": "",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "otomogroove",
+      "email": "juan@otomogroove.com"
+    }
+  ],
+  "name": "react-native-sketch-canvas",
+  "optionalDependencies": {},
   "peerDependencies": {
-    "react-native": "^0.29.0",
-    "react-native-windows": "^0.29.0"
-
-  }
+    "react-native": "^0.29.0"
+  },
+  "readme": "ERROR: No README data found!",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.102"
 }

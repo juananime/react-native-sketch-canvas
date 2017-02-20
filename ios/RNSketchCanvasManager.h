@@ -7,7 +7,8 @@
 //
 
 #import "RCTViewManager.h"
+#import "RNSketchCanvasView.h"
 
 @interface RNSketchCanvasManager : RCTViewManager
-
+@property(nonatomic) RNSketchCanvasView *rnView;
 @end

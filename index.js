@@ -6,6 +6,8 @@
 'use strict';
 import React, {Component, PropTypes} from 'react';
 var {
+
+    NativeModules,
     Platform,
     DeviceEventEmitter,
     TouchableHighlight,
@@ -17,95 +19,87 @@ var {
 
 
 
-
-
-
+var CanvasSketch = NativeModules.RNSketchCanvasManager;
 
 
 const RNSketchCanvas = React.createClass({
     propTypes: {
         ...View.propTypes,
-        autoPlay:React.PropTypes.bool,
-        waveFormStyle:PropTypes.shape({
-            waveColor: React.PropTypes.string,
-            scrubColor: React.PropTypes.string
+        canvasStyle:PropTypes.shape({
+            outlineColor: React.PropTypes.string,
+            fillColor: React.PropTypes.string
         }),
-        componentID:PropTypes.string,
-        src: PropTypes.shape({
-            uri: PropTypes.string,
-            isNetwork: PropTypes.bool,
-            isAsset:PropTypes.bool,
-        }),
-        source: PropTypes.oneOfType([
-            PropTypes.shape({
-                uri: PropTypes.string
-            }),
-            // Opaque type returned by require('./video.mp4')
-            PropTypes.number
-        ]),
-        play:PropTypes.bool,
-        stop:PropTypes.bool,
-        pause:PropTypes.bool,
-        onPress:PropTypes.func,
-        pressed:PropTypes.bool,
-
-
-
-
 
     },
+    getDefaultProps() {
+        return {
+            canvasStyle:{
+                outlineColor:'white',
+                fillColor:'black',
+                },
+        };
+    },
+    drawLine: function(posX){
+        CanvasSketch.drawLine(posX);
+    },
+    drawTriangle:function(PosX,PosY) {
+        console.log('drawTriangle sending x '+PosX + '  Y :; '+PosY);
+       CanvasSketch.drawTriangle(PosX,PosY);
+    },
+    updateTriangle:function(PosX,PosY) {
+        console.log('updateTriangle sending x '+PosX + '  Y :; '+PosY);
+       CanvasSketch.updateTriangle(PosX,PosY);
+    },
+    drawSquare:function(PosX,PosY) {
 
-    componentWillMount: function() {
+        CanvasSketch.drawSquare(PosX,PosY);
+      //
+    },
+    updateSquare:function(PosX,PosY) {
 
+        CanvasSketch.updateSquare(PosX,PosY);
+        //
+    },
+    updateOutlineColor:function(color) {
+        console.log('updateOutlineColor :: '+color);
+        CanvasSketch.updateOutlineColor(processColor(color));
+        //
+    },
+    updateFillColor:function(color) {
+
+        console.log('updateFillColor :: '+color);
+        CanvasSketch.updateFillColor(processColor(color));
+
+    },
+    componentDidMount:function() {
 
     },
 
 
 
     render: function () {
-        const source = resolveAssetSource(this.props.source) || {};
 
-        let uri = source.uri;
-        if (uri && uri.match(/^\//)) {
-            uri = `file://${uri}`;
-        }
-
-
-        const isNetwork = !!(uri && uri.match(/^https?:/));
-        const isAsset = !!(uri && uri.match(/^(assets-library|file|content|ms-appx|ms-appdata):/));
-
-
-        //this.props.waveFormStyle.leftWaveColor=processColor(this.props.waveFormStyle.leftWaveColor)
-        //this.props.waveFormStyle.rightWaveColor=processColor(this.props.waveFormStyle.rightWaveColor)
 
 
         const nativeProps = Object.assign({}, this.props);
         Object.assign(nativeProps, {
-            autoPlay:this.props.autoPlay,
-            waveFormStyle:{
-                waveColor:processColor(this.props.waveFormStyle.waveColor),
-                scrubColor:processColor(this.props.waveFormStyle.scrubColor),
+            canvasStyle:{
+                outlineColor:processColor(this.props.canvasStyle.outlineColor),
+                fillColor:processColor(this.props.canvasStyle.fillColor),
             },
 
-            src: {
-                uri:uri,
-                isNetwork:isNetwork,
-                isAsset:isAsset,
-                type: source.type,
-                mainVer: source.mainVer || 0,
-                patchVer: source.patchVer || 0,
-            },
-            componentID:this.state.componentID,
-
-        });
+        })
 
 
-        return <RNSketchCanvas {...nativeProps} />;
+        return (
+            <RNSketchCanvasView {...nativeProps} />
+        );
+
     }
 
 });
 
-var RNSketchCanvas = requireNativeComponent('RNSketchCanvas', RNSketchCanvas);
+var RNSketchCanvasView = requireNativeComponent('RNSketchCanvas', RNSketchCanvas);
 
 
 module.exports = RNSketchCanvas;
