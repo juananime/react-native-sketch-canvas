@@ -2,6 +2,10 @@
 # react-native-sketch-canvas
 
 React Native component for basic shapes creation.
+Creation and edition of primal shapes square,triangle,cirle and lines.
+The shapes are created in iOS via Quartzcore.
+Pending to Android implementation.
+
 Editable outline and fill color.
 
 
@@ -46,5 +50,20 @@ import RNSketchCanvas from 'react-native-sketch-canvas';
    <RNSketchCanvas ref="rnCanvas" {...this._panResponder.panHandlers} canvasStyle={{fillColor:'white',outlineColor:'red'}}>
    </RNSketchCanvas>
 ```
+
+RNSketchCanvas static methods for shape creation:
+```javascript
+
+drawSquare(x,y)
+updateSquare(x,y)
+
+drawTriangle(x,y)
+updateTriangle(x,y)
+
+
+  
+```
+
+
 
   
