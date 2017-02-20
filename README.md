@@ -39,6 +39,7 @@ Editable outline and fill color.
   	```
 
 ## Usage
+In order to react the shapes modificaton with the mouse actions is advisable to use a panresponder object:
 ```javascript
 import RNSketchCanvas from 'react-native-sketch-canvas';
 
