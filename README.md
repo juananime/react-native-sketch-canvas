@@ -64,6 +64,13 @@ updateTriangle(x,y)
   
 ```
 
+For outline and fill color updates, call:
+```javascript
 
+updateOutlineColor('red')
+updateFillColor('green')
+
+  
+```
 
   
