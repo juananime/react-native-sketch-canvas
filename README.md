@@ -7,6 +7,8 @@ The shapes are created in iOS via Quartzcore.
 Pending to Android implementation.
 
 Editable outline and fill color.
+
+
 ![demo](/resources/SketchGif.gif)
 
 
