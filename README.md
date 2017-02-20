@@ -1,6 +1,14 @@
 
 # react-native-sketch-canvas
 
+React Native component for basic shapes creation.
+Creation and edition of primal shapes square,triangle,cirle and lines.
+The shapes are created in iOS via Quartzcore.
+Pending to Android implementation.
+
+Editable outline and fill color.
+
+
 ## Getting started
 
 `$ npm install react-native-sketch-canvas --save`
@@ -34,20 +42,35 @@
       compile project(':react-native-sketch-canvas')
   	```
 
-#### Windows
-[Read it! :D](https://github.com/ReactWindows/react-native)
-
-1. In Visual Studio add the `RNSketchCanvas.sln` in `node_modules/react-native-sketch-canvas/windows/RNSketchCanvas.sln` folder to their solution, reference from their app.
-2. Open up your `MainPage.cs` app
-  - Add `using Cl.Json.RNSketchCanvas;` to the usings at the top of the file
-  - Add `new RNSketchCanvasPackage()` to the `List<IReactPackage>` returned by the `Packages` method
-
-
 ## Usage
+In order to react the shapes modificaton with the mouse actions is advisable to use a panresponder object:
 ```javascript
 import RNSketchCanvas from 'react-native-sketch-canvas';
 
-// TODO: What do with the module?
-RNSketchCanvas;
+   <RNSketchCanvas ref="rnCanvas" {...this._panResponder.panHandlers} canvasStyle={{fillColor:'white',outlineColor:'red'}}>
+   </RNSketchCanvas>
 ```
+
+RNSketchCanvas static methods for shape creation:
+```javascript
+
+drawSquare(x,y)
+updateSquare(x,y)
+
+drawTriangle(x,y)
+updateTriangle(x,y)
+
+
+  
+```
+
+For outline and fill color updates, call:
+```javascript
+
+updateOutlineColor('red')
+updateFillColor('green')
+
+  
+```
+
   
