@@ -1,4 +1,4 @@
-
+[![](https://img.shields.io/npm/dm/react-native-sketch-canvas.svg?style=flat-square)](https://www.npmjs.com/package/react-native-sketch-canvas)
 # react-native-sketch-canvas
 
 React Native component for basic shapes creation.
